@@ -14,7 +14,7 @@ use App\http\Controllers\PostController;
 */
 
 Route::get('/', function() {
-    return view('welcome');
+    phpinfo();
 });
 
 
