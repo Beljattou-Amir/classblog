@@ -7,6 +7,13 @@
 
 @section('content')
 
-    <h1>testing shit</h1>
-    <h1>aaah shit</h1>
+    @if($loading)
+
+    <p>Chargement...</p>
+    @else
+    <h1>Mon titre</h1>
+        @foreach($posts as $post)
+        <li>{{$post}}</li>
+        @endforeach
+    @endif
 @endsection 

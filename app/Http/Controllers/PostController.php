@@ -8,6 +8,10 @@ class PostController extends Controller
 {
     public function test()
     {
-        return view('test');
+        $loading = false;
+        //return view('test', compact('loading'));
+
+        $posts =['Post 1', 'Post 2', 'Post 3'];
+        return view('test', compact(['loading', 'posts']));
     }
 }
