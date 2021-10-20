@@ -10,7 +10,19 @@ class PostController extends Controller
     public function index()
     {
 
-        $posts = Post::all();
+        $posts = Post::paginate(5);
         return view('posts.list', compact(['posts']));
+    }
+
+    public function details($id)
+    {
+        $post=Post::find($id);
+        
+        return view('posts.details',  compact('post'));
+    }
+
+    public function add()
+    {
+        return view('posts.add');
     }
 }

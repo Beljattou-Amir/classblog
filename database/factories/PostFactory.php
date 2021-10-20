@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PostfactoryFactory extends Factory
+class PostFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
@@ -22,7 +22,7 @@ class PostfactoryFactory extends Factory
     public function definition()
     {
         return [
-            'title'=>$this->faker->title,
+            'title'=>$this->faker->sentence(6),
             'description'=>$this->faker->sentence(100),
             'extrait'=>$this->faker->sentence(10)
 

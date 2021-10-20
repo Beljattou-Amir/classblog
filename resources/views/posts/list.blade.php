@@ -8,7 +8,7 @@
         @if(sizeof($posts)>0)
         @foreach($posts as $post)
             <li>
-                <div>{{$post->title}}</div>
+                <div><a href="{{route('postDetails', $post->id)}}">{{$post->title}}</a>"</div>
                 <div>{{$post->description}}</div>
             </li>
         @endforeach

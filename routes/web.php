@@ -18,4 +18,6 @@ Route::get('/', function() {
 });
 
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index'])->name('postList');
+Route::get('posts/ajouter', [PostController::class, 'add'])->name('postAdd');
+Route::get('posts/{id}', [PostController::class, 'details'])->name('postDetails');
