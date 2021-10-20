@@ -1,10 +1,24 @@
-class PostSeeder extends Seeder 
+<?php
 
+namespace Database\Seeders;
+use Illuminate\Support\Str;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 
-public function run()
+class PostSeeder extends Seeder
 {
-    DB::table(table:'post')->insert([
-        'title'=>'Mon titre'
-        
-        ])
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Post::factory()->count(50)->create();
+    }
 }
+
+
+
+
